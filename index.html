@@ -427,6 +427,70 @@
       line-height: 1;
     }
 
+    /* ---------- ОБЩАЯ КНОПКА "СКАЧАТЬ ВСЁ" ---------- */
+    .download-all-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    .download-all-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      background: #fff;
+      color: #000;
+      border: 1px solid #fff;
+      border-radius: 0.7rem;
+      padding: 1rem 2rem;
+      font-weight: 800;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.25s ease, color 0.25s ease,
+                  transform 0.2s ease, box-shadow 0.25s ease;
+      animation: btnBreath 3.6s ease-in-out infinite;
+    }
+
+    .download-all-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -80%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        100deg,
+        transparent,
+        rgba(0, 0, 0, 0.15),
+        transparent
+      );
+      transform: skewX(-20deg);
+      animation: shineBtn 2.8s ease-in-out infinite;
+    }
+
+    .download-all-btn:hover {
+      background: #000;
+      color: #fff;
+      border-color: #fff;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 28px -8px rgba(255, 255, 255, 0.45);
+      animation-play-state: paused;
+    }
+
+    .download-all-btn:active {
+      transform: scale(0.97);
+    }
+
+    .download-all-btn span {
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
     /* ---------- ПОДВАЛ ---------- */
     .footer-note {
       margin-top: 2rem;
@@ -489,7 +553,8 @@
         gap: 1.5rem;
       }
 
-      .download-btn {
+      .download-btn,
+      .download-all-btn {
         font-size: 0.85rem;
         padding: 0.75rem 1.2rem;
       }
@@ -505,7 +570,8 @@
       }
     }
 
-    .download-btn:focus-visible {
+    .download-btn:focus-visible,
+    .download-all-btn:focus-visible {
       outline: 2px solid #fff;
       outline-offset: 4px;
     }
@@ -540,7 +606,7 @@
         <div class="program-desc">
           Снимает блокировки с файлов и папок, разблокирует доступ к системным ресурсам. Устраняет ошибку «отказано в доступе».
         </div>
-        <a href="https://drive.google.com/uc?export=download&id=1oUJMp5zbmBvWhjT6O3vPVvRDhCeZq4xE"
+        <a href="https://filekiwi.download/5a3ea711#vNG-FaXANBYOej3GG-ADqQ"
            class="download-btn" target="_blank" rel="noopener">
           <span>⬇</span> Скачать
         </a>
@@ -553,7 +619,7 @@
         <div class="program-desc">
           Глубокая очистка системы от мусора, временных файлов, кэша и битых записей реестра. Ускоряет работу Windows.
         </div>
-        <a href="https://drive.google.com/uc?export=download&id=1QU7zLT1bReaMZQ36Mw64Vd_yYy-MCFu2"
+        <a href="https://filekiwi.download/5a3ea711#vNG-FaXANBYOej3GG-ADqQ"
            class="download-btn" target="_blank" rel="noopener">
           <span>⬇</span> Скачать
         </a>
@@ -566,7 +632,7 @@
         <div class="program-desc">
           Восстановление удалённых файлов, исправление загрузчика, резервное копирование драйверов. Незаменим при сбоях ОС.
         </div>
-        <a href="https://drive.google.com/uc?export=download&id=10cNj0PqW_pvEOZ-MfLX_kPsys8B4Ell_"
+        <a href="https://filekiwi.download/5a3ea711#vNG-FaXANBYOej3GG-ADqQ"
            class="download-btn" target="_blank" rel="noopener">
           <span>⬇</span> Скачать
         </a>
@@ -579,7 +645,7 @@
         <div class="program-desc">
           Архиватор для создания и распаковки RAR, ZIP и других форматов. Сжатие, шифрование и защита архивов паролем.
         </div>
-        <a href="https://drive.google.com/uc?export=download&id=1YGshlICTtdR1ppyLVm6V3WF_Ppbisu-5"
+        <a href="https://filekiwi.download/5a3ea711#vNG-FaXANBYOej3GG-ADqQ"
            class="download-btn" target="_blank" rel="noopener">
           <span>⬇</span> Скачать
         </a>
@@ -592,12 +658,20 @@
         <div class="program-desc">
           Управление антивирусом Windows Defender: быстрое отключение и включение защиты, обход блокировок. Удобный инструмент для настройки системы.
         </div>
-        <a href="https://drive.google.com/uc?export=download&id=1cPuBXJJe5Jcac-toXHu6Evu-dduDGEjV"
+        <a href="https://filekiwi.download/5a3ea711#vNG-FaXANBYOej3GG-ADqQ"
            class="download-btn" target="_blank" rel="noopener">
           <span>⬇</span> Скачать
         </a>
       </div>
 
+    </div>
+
+    <!-- ОБЩАЯ ССЫЛКА НА ВСЕ ФАЙЛЫ -->
+    <div class="download-all-wrap">
+      <a href="https://filekiwi.download/5a3ea711#vNG-FaXANBYOej3GG-ADqQ"
+         class="download-all-btn" target="_blank" rel="noopener">
+        <span>📦</span> Скачать всё одним архивом
+      </a>
     </div>
 
     <div class="footer-note">
